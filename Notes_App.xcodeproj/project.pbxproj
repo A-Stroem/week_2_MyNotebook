@@ -11,6 +11,7 @@
 		662AC74A299AC97C00A2C9D1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662AC749299AC97C00A2C9D1 /* ContentView.swift */; };
 		662AC74C299AC97D00A2C9D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 662AC74B299AC97D00A2C9D1 /* Assets.xcassets */; };
 		662AC74F299AC97D00A2C9D1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 662AC74E299AC97D00A2C9D1 /* Preview Assets.xcassets */; };
+		662AC758299ACA6B00A2C9D1 /* NoteDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662AC757299ACA6B00A2C9D1 /* NoteDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		662AC749299AC97C00A2C9D1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		662AC74B299AC97D00A2C9D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		662AC74E299AC97D00A2C9D1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		662AC757299ACA6B00A2C9D1 /* NoteDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				662AC747299AC97C00A2C9D1 /* Notes_AppApp.swift */,
 				662AC749299AC97C00A2C9D1 /* ContentView.swift */,
+				662AC757299ACA6B00A2C9D1 /* NoteDetailView.swift */,
 				662AC74B299AC97D00A2C9D1 /* Assets.xcassets */,
 				662AC74D299AC97D00A2C9D1 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				662AC758299ACA6B00A2C9D1 /* NoteDetailView.swift in Sources */,
 				662AC74A299AC97C00A2C9D1 /* ContentView.swift in Sources */,
 				662AC748299AC97C00A2C9D1 /* Notes_AppApp.swift in Sources */,
 			);
