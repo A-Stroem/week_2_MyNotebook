@@ -1,25 +1,24 @@
 //
 //  Note.swift
-//  Notes_App
+//  SwiftUIFirebase
 //
-//  Created by Anders Strøm on 27/02/2023.
+//  Created by Jon Eikholm on 14/02/2023.
 //
 
 import Foundation
 import UIKit
 
-class Note: Identifiable {
-    var id: String
-    var title: String
-    var text: String
-    var imageURL: String?
-    var image: UIImage?
+class Note:Identifiable {
+    var id:String
+    var text:String
+    var image:UIImage? = nil
+    var hasImage = false
     
-    init(id: String, title: String, text: String, imageURL: String?, image: UIImage?) {
+    init(id: String, text: String, hasImage:Bool) {
         self.id = id
-        self.title = title
         self.text = text
-        self.imageURL = imageURL
-        self.image = image
+        self.hasImage = hasImage
     }
+    
 }
+

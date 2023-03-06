@@ -1,41 +1,48 @@
 //
 //  ContentView.swift
-//  Notes_App
+//  SwiftUIImages
 //
-//  Created by Anders Strøm on 27/02/2023.
+//  Created by Jon Eikholm on 25/09/2020.
 //
-
 
 import SwiftUI
 
 struct ContentView: View {
-    
-    @ObservedObject var demoFirebase = FirebaseViewModel()
-    
+    @State var isPresented:Bool = false
+    @State var isPresented2:Bool = false
+    @State var inputImage:UIImage?
+    @State var imageToDisplay:Image = Image(systemName: "phone")
     var body: some View {
-        NavigationView {
+        NavigationView{
             VStack{
-                List($demoFirebase.notes){ $note in
-                    NavigationLink(destination: NoteDetailView(note: $note)) {
-                        NoteRowView(note: $note)
-                    }
-                }
-                .navigationBarTitle("Notes")
-                .navigationBarItems(trailing: Button(action: {
-                    demoFirebase.addItem(text: "")
-                }, label: {
-                    Image(systemName: "plus")
-                }))
+                ListDemo()
+//                self.imageToDisplay.resizable()
+//                    .frame(width: 300, height: 300, alignment: .center)
+//                Button(action: {
+//                    self.isPresented = true
+//                }, label: {
+//                    Text("Hent Billede")
+//                })
+//                Button(action: {
+//                    self.isPresented2 = true
+//                }, label: {
+//                    Text("Vis Detail")
+//                })
             }
+//        }.sheet(isPresented: self.$isPresented, onDismiss: self.handleImage, content: {
+//            MyImagePicker(image: self.$inputImage, isPresented: self.$isPresented)
+//        }).sheet(isPresented: $isPresented2) {
+//            SomeDetailView()
         }
-        .onAppear(){
-            demoFirebase.startListener()
+    }
+    func handleImage() {
+        // få det valgte billede vist- Gør det selv !
+        if let img = inputImage {
+            print("fandt et billede")
+            self.imageToDisplay = Image(uiImage: img) // oprettet et Image ud fra UIImage
+        }else {
+            print("fandt intet billede i bibliotek")
         }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
